@@ -1,32 +1,43 @@
+/*
+åˆ©ç”¨åæ’æ³•åˆ›å»ºå•é“¾è¡¨ã€‚
+ä¾‹ï¼ˆåªæœ‰ç¬¬2è¡Œä¸ºè¾“å…¥ï¼‰ï¼š
+empty!
+Wang Li Gao Miao Long
+1:Wang
+2:Li
+3:Gao
+4:Miao
+5:Long
+*/
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-// µ¥Á´±í½Úµã½á¹¹Ìå
+// å•é“¾è¡¨èŠ‚ç‚¹ç»“æ„ä½“
 struct Node
 {
     string data;
     Node *next;
 };
 
-// µ¥Á´±í½á¹¹Ìå
+// å•é“¾è¡¨ç»“æ„ä½“
 struct LinkList
 {
     Node *head;
 };
 
-// ³õÊ¼»¯µ¥Á´±í
+// åˆå§‹åŒ–å•é“¾è¡¨
 void InitList(LinkList &L)
 {
     L.head = NULL;
     cout << "empty!" << endl;
 }
 
-// ºó²å·¨´´½¨µ¥Á´±í
+// åæ’æ³•åˆ›å»ºå•é“¾è¡¨
 void CreateList_R(LinkList &L, int n)
 {
-    Node *tail = NULL; // Î²Ö¸Õë£¬Ö¸ÏòÁ´±íÎ²²¿
+    Node *tail = NULL; // å°¾æŒ‡é’ˆï¼ŒæŒ‡å‘é“¾è¡¨å°¾éƒ¨
     for (int i = 0; i < n; i++)
     {
         string input;
@@ -38,18 +49,18 @@ void CreateList_R(LinkList &L, int n)
 
         if (L.head == NULL)
         {
-            L.head = newNode; // Èç¹ûÁ´±íÎª¿Õ£¬ĞÂ½Úµã×÷ÎªÍ·½Úµã
-            tail = newNode;   // Î²Ö¸ÕëÖ¸ÏòĞÂ½Úµã
+            L.head = newNode; // å¦‚æœé“¾è¡¨ä¸ºç©ºï¼Œæ–°èŠ‚ç‚¹ä½œä¸ºå¤´èŠ‚ç‚¹
+            tail = newNode;   // å°¾æŒ‡é’ˆæŒ‡å‘æ–°èŠ‚ç‚¹
         }
         else
         {
-            tail->next = newNode; // ºó²å·¨£¬½«ĞÂ½ÚµãÁ´½Óµ½Î²½ÚµãºóÃæ
-            tail = newNode;       // ¸üĞÂÎ²Ö¸Õë
+            tail->next = newNode; // åæ’æ³•ï¼Œå°†æ–°èŠ‚ç‚¹é“¾æ¥åˆ°å°¾èŠ‚ç‚¹åé¢
+            tail = newNode;       // æ›´æ–°å°¾æŒ‡é’ˆ
         }
     }
 }
 
-// µ¥Á´±í±éÀú
+// å•é“¾è¡¨éå†
 void showList(LinkList &L)
 {
     Node *current = L.head;
@@ -65,9 +76,9 @@ void showList(LinkList &L)
 int main()
 {
     LinkList Lname;
-    InitList(Lname);        // ³õÊ¼»¯µ¥Á´±í
-    showList(Lname);        // µ¥Á´±í±éÀú
-    CreateList_R(Lname, 5); // ºó²å·¨´´½¨µ¥Á´±í
-    showList(Lname);        // µ¥Á´±í±éÀú
+    InitList(Lname);        // åˆå§‹åŒ–å•é“¾è¡¨
+    showList(Lname);        // å•é“¾è¡¨éå†
+    CreateList_R(Lname, 5); // åæ’æ³•åˆ›å»ºå•é“¾è¡¨
+    showList(Lname);        // å•é“¾è¡¨éå†
     return 0;
 }
