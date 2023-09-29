@@ -1,36 +1,22 @@
 # College assignment
 
-#### Description
-收录大学时期所有作业代码
+#### presentation
+Contains all the homework codes during the university.
 
-#### Software Architecture
-Software architecture description
+#### warn for discomfort
+![Enter picture description](c++%20BasicHomework/%E8%8F%B2%E5%88%A9%E7%89%B9%E8%8D%AF%E7%89%87.jpg)
 
-#### Installation
+#### matters need attention
+1.Due to the limited author level and the migration of the source code file, some code errors may occur. You can use Issues to correct the errors in time.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+2.c BasicHomework, C ++ BasicHomework is a part of the file saved by the "猥琐死丢丢"(Visual Studio 2022), there are some redundant code.
 
-#### Instructions
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+3.Some files may use a higher c++ standard, you can adjust according to the actual situation.
 
 
-#### Gitee Feature
 
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+
+
+
+
+
