@@ -1,0 +1,115 @@
+MySQL数据库上机实验
+
+实验四 数据库的完整性约束
+一、实验目的
+1.	熟悉数据表结构及使用特点；
+2.	熟悉使用Navicat界面方式管理数据表数据；
+3.	熟悉使用T-SQL语句管理数据表数据。
+二、实验内容及步骤
+以课本指定的数据库为例，并依据数据表的结构创建相对应的数据表（student、course、test），请分别使用Navicat界面方式及T-SQL 语句实现进行以下操作：
+1.	请用T-SQL语句创建数据库JXGL2；
+2.	请用T-SQL语句创建数据表student，course和test；
+Student表的表结构
+列名	描述	数据类型	允许空值	说明
+SNO	  学号	CHAR(9)	    NO	  PRIMARY KEY
+SNAME 姓名	VARCHAR(10)	NO	
+SEX	  性别	CHAR(2)	    YES	
+AGE	  年龄	SAMLLINT	YES	
+CGNO  班级号	CHAR(5)	   YES	
+3.	
+Course表的表结构
+列名	  描述	数据类型	允许空值	说明
+CNO	   课程号	CHAR(6)	    NO	PRIMARY KEY
+CNAME	课程名	VARCHAR(20)	NO	
+CREDIT	学分	SMALLINT	YES	
+WHOURS	周学时	SMALLINT	YES	
+
+Test表的表结构
+列名	  描述	数据类型	允许空值	说明
+SNO	   学号	 CHAR(9)	  NO	PRIMARY KEY
+CNO	   课程号	CHAR(10)	 NO	   PRIMARY KEY
+GRADE	成绩	 CHAR(2)      YES	
+
+4.	请用T-SQL语句插入表数据；
+INSERT INTO `student` VALUES ('200515001', '赵菁菁', 23, '女', 'CS');
+INSERT INTO `student` VALUES ('200515002', '李勇', 22, '男', 'CS');
+INSERT INTO `student` VALUES ('200515004', '张衡', 18, '男', 'IS');
+INSERT INTO `student` VALUES ('200515005', '张向东', 20, '男', 'IS');
+INSERT INTO `student` VALUES ('200515006', '张向丽', 20, '女', 'IS');
+INSERT INTO `student` VALUES ('200515007', '王芳', 20, '女', 'CS');
+INSERT INTO `student` VALUES ('200515008', '王民生', 25, '男', 'MA');
+INSERT INTO `student` VALUES ('200515009', '王小民', 18, '女', 'MA');
+INSERT INTO `student` VALUES ('200515010', '李晨', 22, '女', 'MA');
+INSERT INTO `student` VALUES ('200515011', '张毅', 20, '男', 'WM');
+INSERT INTO `student` VALUES ('200515012', '杨磊', 20, '女', 'EN');
+INSERT INTO `student` VALUES ('200515013', '李晨', 19, '女', 'MA');
+INSERT INTO `student` VALUES ('200515014', '张丰毅', 22, '男', 'CS');
+INSERT INTO `student` VALUES ('200515015', '李蕾', 21, '女', 'EN');
+INSERT INTO `student` VALUES ('200515016', '刘社', 21, '男', 'CM');
+INSERT INTO `student` VALUES ('200515017', '刘星耀', 18, '男', 'CM');
+INSERT INTO `student` VALUES ('200515018', '李贵', 19, '男', 'EN');
+INSERT INTO `student` VALUES ('200515019', '林自许', 20, '男', 'WM');
+INSERT INTO `student` VALUES ('200515020', '马翔', 21, '男', NULL);
+INSERT INTO `student` VALUES ('200515021', '刘峰', 25, '男', 'CS');
+INSERT INTO `student` VALUES ('200515022', '牛站强', 22, '男', NULL);
+INSERT INTO `student` VALUES ('200515023', '李婷婷', 18, '女', NULL);
+INSERT INTO `student` VALUES ('200515024', '严丽', 20, '女', NULL);
+INSERT INTO `student` VALUES ('200515025', '朱小鸥', 30, '女', 'WM');
+
+INSERT INTO `course` VALUES ('1', '数据库', 4, 6);
+INSERT INTO `course` VALUES ('10', '人工智能', 2, 2);
+INSERT INTO `course` VALUES ('2', '数学', 2, 6);
+INSERT INTO `course` VALUES ('3', '信息系统', 4, 4);
+INSERT INTO `course` VALUES ('4', '操作系统', 3, 5);
+INSERT INTO `course` VALUES ('5', '数据结构', 4, 6);
+INSERT INTO `course` VALUES ('6', '数据处理', 2, 4);
+INSERT INTO `course` VALUES ('7', 'PASCAL语言', 4, 2);
+INSERT INTO `course` VALUES ('8', '大学英语', 4, 4);
+INSERT INTO `course` VALUES ('9', '计算机网络', 4, 4);
+
+INSERT INTO `test` VALUES ('200515001', '1', 75);
+INSERT INTO `test` VALUES ('200515001', '4', 62);
+INSERT INTO `test` VALUES ('200515001', '5', 58);
+INSERT INTO `test` VALUES ('200515001', '7', 70);
+INSERT INTO `test` VALUES ('200515002', '1', 85);
+INSERT INTO `test` VALUES ('200515002', '3', 53);
+INSERT INTO `test` VALUES ('200515002', '4', 85);
+INSERT INTO `test` VALUES ('200515003', '1', 86);
+INSERT INTO `test` VALUES ('200515004', '1', 74);
+INSERT INTO `test` VALUES ('200515004', '2', 46);
+INSERT INTO `test` VALUES ('200515005', '1', 58);
+INSERT INTO `test` VALUES ('200515005', '10', 65);
+INSERT INTO `test` VALUES ('200515005', '2', 89);
+INSERT INTO `test` VALUES ('200515006', '1', 84);
+INSERT INTO `test` VALUES ('200515006', '2', 65);
+INSERT INTO `test` VALUES ('200515008', '2', 72);
+INSERT INTO `test` VALUES ('200515009', '2', 76);
+INSERT INTO `test` VALUES ('200515010', '2', 96);
+INSERT INTO `test` VALUES ('200515010', '8', 86);
+INSERT INTO `test` VALUES ('200515011', '8', 62);
+INSERT INTO `test` VALUES ('200515015', '8', 0);
+INSERT INTO `test` VALUES ('200515016', '8', 99);
+INSERT INTO `test` VALUES ('200515017', '8', 99);
+INSERT INTO `test` VALUES ('200515018', '8', 58);
+INSERT INTO `test` VALUES ('200515021', '6', 58);
+INSERT INTO `test` VALUES ('200515021', '9', 54);
+INSERT INTO `test` VALUES ('200515029', '7', 20);
+5.	请用至少2种方法定义JXGL数据库中student表的主键sno；
+6.	将数据库JXGL的表course的cno字段定义为主键，约束名称为cno_pk;
+7.	为表course中的字段cname添加唯一值约束；
+8.	将数据库JXGL的表test的sno及cno字段组合定义为主键，约束名称为test_pk;
+9.	对于数据表test的sno、cno字段定义为外码，使之与表student的主码sno及表course的主码cno对应，实现如下参照完整性：
+1)	删除student表中记录的同时删除test表中与该记录sno字段值相同的记录；
+2)	修改student表某记录的sno时，若test表中与该字段值对应的有若干条记录，则拒绝修改；
+3)	修改course表cno字段值时，该字段在test表中的对应值也应修改；
+4)	删除course表一条记录时，若该字段在在test表中存在，则删除该字段对应的记录；
+5)	向test表添加记录时，如果该记录的sno字段的值在student中不存在，则拒绝插入；
+10.	定义check约束，要求学生成绩在0-100之间；
+11.	定义JXGL数据库中student表中学生年龄值在16-25范围内；
+12.	修改JXGL数据库中student表中学生姓名长度在2-8字符之间；
+13.	定义JXGL数据库中student表中学生性别列中只能输入“男”或“女”；
+14.	定义JXGL数据库student表中学生年龄值默认值为20；
+15.	修改student表学生的年龄值约束可以为15-30范围内；
+16.	删除上述唯一值约束、外键约束及check约束；
+17.	思考题：删除student表中一条记录的同时删除其在test表中对应的记录；
+
