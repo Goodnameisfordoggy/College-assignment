@@ -1,3 +1,23 @@
+/*
+给定一个有向图，利用迪杰斯特拉算法求某一顶点到其他顶点的最短路径。
+例（最后6行为输出，其中-1表示其前面两个顶点之间没有路径）：
+6 8
+ABCDEF
+AC 10
+AF 100
+AE 30
+BC 5
+CD 50
+DF 10
+ED 20
+EF 60
+AA:0
+AB:-1
+AC:10
+AD:50
+AE:30
+AF:60
+*/
 #include <iostream>
 using namespace std;
 #define MAXINT 2147483647
@@ -104,10 +124,10 @@ void ShortestPath_DIJ(AMGraph G, int v0)
 
 int main()
 {
-    int vnum, anum; // �����������
+    int vnum, anum; // 顶点数与边数
     cin >> vnum >> anum;
     AMGraph G;
-    CreateUDN(G, vnum, anum); // ��������ͼ���ڽӾ���(������������)
+    CreateUDN(G, vnum, anum); // 创建无向图的邻接矩阵(至少两个顶点)
     ShortestPath_DIJ(G, 0);
     return 0;
 }
