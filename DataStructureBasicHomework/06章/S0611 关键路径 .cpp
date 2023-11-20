@@ -1,3 +1,22 @@
+/*
+åœ¨S0610çš„åŸºç¡€ä¸Šä¿®æ”¹ç¨‹åºã€‚
+åœ¨AOE-ç½‘ä¸­ï¼Œæ±‚è§£å…¶å…³é”®è·¯å¾„ã€‚
+ä¾‹ï¼ˆæœ€åä¸€è¡Œä¸ºè¾“å‡ºï¼‰ï¼š
+9 11
+ABCDEFGHI
+AB 6
+AC 4
+AD 5
+BE 1
+CE 1
+DF 2
+EG 9
+EH 7
+FH 4
+GI 2
+HI 4
+AB BE EH EG GI HI 
+*/
 #include <iostream>
 #include <deque>
 using namespace std;
@@ -37,17 +56,17 @@ Status CreateUDG(ALGraph &G)
 {
     char v1, v2;
     int i, j, k, w;
-    // cout << "ÇëÊäÈëÍ¼µÄ¶¥µãºÍ±ßÊıÁ¿" << endl;
+    // cout << "è¯·è¾“å…¥å›¾çš„é¡¶ç‚¹å’Œè¾¹æ•°é‡" << endl;
     cin >> G.vexnum >> G.arcNum;
     for (i = 0; i < G.vexnum; i++)
     {
-        // cout << "ÇëÊäÈëµÚ" << i + 1 << "¸ö¶¥µãµÄÊı¾İ" << endl;
+        // cout << "è¯·è¾“å…¥ç¬¬" << i + 1 << "ä¸ªé¡¶ç‚¹çš„æ•°æ®" << endl;
         cin >> G.vertices[i].data;
         G.vertices[i].firstArc = NULL;
     }
     for (k = 0; k < G.arcNum; k++)
     {
-        // cout << "ÇëÊäÈëµÚ" << k + 1 << "Ìõ±ßµÄÁ½¸ö¶¥µã" << endl; //Õâ´Ë²»¿¼ÂÇ±ßµÄÈ¨Öµ
+        // cout << "è¯·è¾“å…¥ç¬¬" << k + 1 << "æ¡è¾¹çš„ä¸¤ä¸ªé¡¶ç‚¹" << endl; //è¿™æ­¤ä¸è€ƒè™‘è¾¹çš„æƒå€¼
         cin >> v1 >> v2 >> w;
         i = LocateVex(G, v1);
         j = LocateVex(G, v2);
@@ -125,7 +144,7 @@ Status CriticalPath(ALGraph G, int *topo)
         p = G.vertices[k].firstArc;
         while (p != NULL)
         {
-            if (Ve[p->adjVex] < Ve[k] + p->info) // Ve[i] = Max{Ve[k] + p->weight} »¡Îª<k,i>
+            if (Ve[p->adjVex] < Ve[k] + p->info) // Ve[i] = Max{Ve[k] + p->weight} å¼§ä¸º<k,i>
             {
                 Ve[p->adjVex] = Ve[k] + p->info;
             }
@@ -140,7 +159,7 @@ Status CriticalPath(ALGraph G, int *topo)
         p = G.vertices[k].firstArc;
         while (p != NULL)
         {
-            if (Vl[k] > Vl[p->adjVex] - p->info) // Vl[i] = Min{Vl[K] - p->weight}  »¡Îª<i,k>)
+            if (Vl[k] > Vl[p->adjVex] - p->info) // Vl[i] = Min{Vl[K] - p->weight}  å¼§ä¸º<i,k>)
             {
                 Vl[k] = Vl[p->adjVex] - p->info;
             }
@@ -168,10 +187,10 @@ Status CriticalPath(ALGraph G, int *topo)
 int main()
 {
     ALGraph G;
-    CreateUDG(G); // ²ÉÓÃÁÚ½Ó±í´´½¨ÎŞÏòÍ¼
+    CreateUDG(G); // é‡‡ç”¨é‚»æ¥è¡¨åˆ›å»ºæ— å‘å›¾
     int topo[G.vexnum] = {0};
 
-    // ÈôÓĞ¹Ø¼üÂ·¾¶£¬Êä³öÂ·¾¶ÉÏµÄËùÓĞ»¡£¨ÔÙÊä³öÒ»¿Õ¸ñÓÃÓÚ¼ä¸ô£©
+    // è‹¥æœ‰å…³é”®è·¯å¾„ï¼Œè¾“å‡ºè·¯å¾„ä¸Šçš„æ‰€æœ‰å¼§ï¼ˆå†è¾“å‡ºä¸€ç©ºæ ¼ç”¨äºé—´éš”ï¼‰
     if (CriticalPath(G, topo) != OK)
         cout << "Error!" << endl;
 
