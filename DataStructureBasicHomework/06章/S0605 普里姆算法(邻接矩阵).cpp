@@ -1,3 +1,21 @@
+/*
+假设一个无向网G以邻接矩阵形式存储，利用普里姆算法从顶点u出发构造G的最小生成树T，要求输出T的各条边（注意每输出一条边以后再输出一个空格用于间隔）。
+例（最后2行为输出）：
+6 10
+ABCDEF
+AB 6
+AC 1
+AD 5
+BC 5
+CD 5
+BE 3
+CE 6
+EF 6
+CF 4
+DF 2
+AC CF FD CB BE
+BE BC CA CF FD
+*/
 #include <iostream>
 using namespace std;
 #define MAXINT 2147483647
@@ -96,8 +114,8 @@ void MiniSpanTree_Prim(AMGraph &G, VerTexType v)
 int main()
 {
     AMGraph G;
-    CreateUDN(G);                    // ��������ͼ���ڽӾ���(������������)
-    MiniSpanTree_Prim(G, G.vexs[0]); // ����ķ�㷨
+    CreateUDN(G);                    // 创建无向图的邻接矩阵(至少两个顶点)
+    MiniSpanTree_Prim(G, G.vexs[0]); // 普里姆算法
     cout << endl;
     MiniSpanTree_Prim(G, G.vexs[1]);
     return 0;
