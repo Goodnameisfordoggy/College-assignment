@@ -2,28 +2,28 @@
  * @Author: HDJ
  * @StartDate: please fill in
  * @LastEditTime: 2024-04-11 15:34:22
- * @FilePath: \java BasicHomework\0503 ÖÐ¹úÌØÉ«Éç»áÖ÷ÒåµÄÌåÖÆÖÐÓÐÕâÑùµÄÏÖÏó£ºµØ·½Ê¡Õþ¸®Òª¼á³Öµ³µÄÁìµ¼ºÍ°´ÕÕ¹úÎñÔºµÄÖ¸Ê¾½øÐÐ°²È«Éú²ú¡£±àÐ´Ò»¸öJavaÓ¦ÓÃ³ÌÐòÃèÊöÉÏÊöµÄÌåÖÆÏÖÏó¡£\test.java
- * @Description: ÌâÄ¿ÄÚÈÝ£º
-£¨1£©¶¨ÒåÒ»¸ö¡°µ³ÖÐÑë¡±½Ó¿Ú£ºCentralPartyCommittee£¬6£8¸Ã½Ó¿ÚÖÐÓÐ¸ö¡°¼á³Öµ³µÄÁìµ¼¡±·½·¨£ºvoid partyLeader()¡£
-£¨2£©¶¨ÒåÒ»¸ö¡°¹úÎñÔº¡±³éÏóÀà£ºStateCouncil£¬6£8¸Ã³éÏóÀàÖÐÓÐ¸ö¡°°²È«Éú²ú¡±µÄ³éÏó·½·¨£º void6£8safetyInProduction()¡£
-£¨3£©¶¨ÒåÒ»¸ö¡°Ê¡Õþ¸®¡±Àà£ºProvince£¬6£8¸ÃÀàÓÐÒ»¸ö³ÉÔ±±äÁ¿name£¬¸ÃÀà¼Ì³ÐStateCouncilÀà²¢ÊµÏÖCentralPartyCommittee½Ó¿Ú£»
-ÖØÐ´partyLeader()·½·¨ºÍsafetyInProduction()·½·¨6£8¡£¶¨Òåshow·½·¨£¬Êä³öÊ¡·ÝÃû³Æ¡£
-£¨4£©¶¨ÒåÒ»¸öÖ÷ÀàTest£¬ÔÚÖ÷ÀàµÄmain·½·¨ÖÐ´´½¨ProvinceÀàµÄ¶ÔÏó£¬²âÊÔProvinceÀàµÄ¹¦ÄÜ¡£
-×¢Òâ£º¶¨Òå½Ó¿ÚÊ±²»Òª¼Ópublic
+ * @FilePath: \java BasicHomework\0503 The people of our provinces must carry out safe production in accordance with the instructions of the State Council.ç¼–å†™ä¸€ä¸ªJavaåº”ç”¨ç¨‹åºæè¿°ä¸Šè¿°çš„ä½“åˆ¶çŽ°è±¡ã€‚\test.java
+ * @Description: é¢˜ç›®å†…å®¹ï¼š
+ï¼ˆ1ï¼‰å®šä¹‰ä¸€ä¸ªâ€œå…šä¸­å¤®â€æŽ¥å£ï¼šCentralPartyCommitteeï¼Œâ€‚è¯¥æŽ¥å£ä¸­æœ‰ä¸ªâ€œåšæŒå…šçš„é¢†å¯¼â€æ–¹æ³•ï¼švoid partyLeader()ã€‚
+ï¼ˆ2ï¼‰å®šä¹‰ä¸€ä¸ªâ€œå›½åŠ¡é™¢â€æŠ½è±¡ç±»ï¼šStateCouncilï¼Œâ€‚è¯¥æŠ½è±¡ç±»ä¸­æœ‰ä¸ªâ€œå®‰å…¨ç”Ÿäº§â€çš„æŠ½è±¡æ–¹æ³•ï¼š voidâ€‚safetyInProduction()ã€‚
+ï¼ˆ3ï¼‰å®šä¹‰ä¸€ä¸ªâ€œçœæ”¿åºœâ€ç±»ï¼šProvinceï¼Œâ€‚è¯¥ç±»æœ‰ä¸€ä¸ªæˆå‘˜å˜é‡nameï¼Œè¯¥ç±»ç»§æ‰¿StateCouncilç±»å¹¶å®žçŽ°CentralPartyCommitteeæŽ¥å£ï¼›
+é‡å†™partyLeader()æ–¹æ³•å’ŒsafetyInProduction()æ–¹æ³•â€‚ã€‚å®šä¹‰showæ–¹æ³•ï¼Œè¾“å‡ºçœä»½åç§°ã€‚
+ï¼ˆ4ï¼‰å®šä¹‰ä¸€ä¸ªä¸»ç±»Testï¼Œåœ¨ä¸»ç±»çš„mainæ–¹æ³•ä¸­åˆ›å»ºProvinceç±»çš„å¯¹è±¡ï¼Œæµ‹è¯•Provinceç±»çš„åŠŸèƒ½ã€‚
+æ³¨æ„ï¼šå®šä¹‰æŽ¥å£æ—¶ä¸è¦åŠ public
 
-Êä³ö£º
+è¾“å‡ºï¼š
 Hebei Province---
 The people of our provinces must adhere to the leadership of the Party.
 The people of our provinces must carry out safe production in accordance with the instructions of the State Council.
  * 
- * 				*		Ð´×ÖÂ¥ÀïÐ´×Ö¼ä£¬Ð´×Ö¼äÀï³ÌÐòÔ±£»
- * 				*		³ÌÐòÈËÔ±Ð´³ÌÐò£¬ÓÖÄÃ³ÌÐò»»¾ÆÇ®¡£
- * 				*		¾ÆÐÑÖ»ÔÚÍøÉÏ×ø£¬¾Æ×í»¹À´ÍøÏÂÃß£»
- * 				*		¾Æ×í¾ÆÐÑÈÕ¸´ÈÕ£¬ÍøÉÏÍøÏÂÄê¸´Äê¡£
- * 				*		µ«Ô¸ÀÏËÀµçÄÔ¼ä£¬²»Ô¸¾Ï¹ªÀÏ°åÇ°£»
- * 				*		±¼³Û±¦Âí¹óÕßÈ¤£¬¹«½»×ÔÐÐ³ÌÐòÔ±¡£
- * 				*		±ðÈËÐ¦ÎÒß¯·èñ²£¬ÎÒÐ¦×Ô¼ºÃüÌ«¼ú£»
- * 				*		²»¼ûÂú½ÖÆ¯ÁÁÃÃ£¬ÄÄ¸ö¹éµÃ³ÌÐòÔ±£¿    
+ * 				*		å†™å­—æ¥¼é‡Œå†™å­—é—´ï¼Œå†™å­—é—´é‡Œç¨‹åºå‘˜ï¼›
+ * 				*		ç¨‹åºäººå‘˜å†™ç¨‹åºï¼Œåˆæ‹¿ç¨‹åºæ¢é…’é’±ã€‚
+ * 				*		é…’é†’åªåœ¨ç½‘ä¸Šåï¼Œé…’é†‰è¿˜æ¥ç½‘ä¸‹çœ ï¼›
+ * 				*		é…’é†‰é…’é†’æ—¥å¤æ—¥ï¼Œç½‘ä¸Šç½‘ä¸‹å¹´å¤å¹´ã€‚
+ * 				*		ä½†æ„¿è€æ­»ç”µè„‘é—´ï¼Œä¸æ„¿éž èº¬è€æ¿å‰ï¼›
+ * 				*		å¥”é©°å®é©¬è´µè€…è¶£ï¼Œå…¬äº¤è‡ªè¡Œç¨‹åºå‘˜ã€‚
+ * 				*		åˆ«äººç¬‘æˆ‘å¿’ç–¯ç™«ï¼Œæˆ‘ç¬‘è‡ªå·±å‘½å¤ªè´±ï¼›
+ * 				*		ä¸è§æ»¡è¡—æ¼‚äº®å¦¹ï¼Œå“ªä¸ªå½’å¾—ç¨‹åºå‘˜ï¼Ÿ    
  * Copyright (c) 2024 by HDJ, All Rights Reserved. 
  */
 interface CentralPartyCommittee {
