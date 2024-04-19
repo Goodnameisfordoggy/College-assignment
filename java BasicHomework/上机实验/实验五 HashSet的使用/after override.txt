@@ -1,0 +1,11 @@
+print1:
+lisi,25,4500
+zhangsan,18,4000
+wangwu,22,4200
+print-add:
+lisi,25,4500
+zhangsan,18,4000
+wangwu,22,4200
+print-del:
+lisi,25,4500
+wangwu,22,4200
