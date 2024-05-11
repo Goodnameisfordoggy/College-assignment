@@ -1,18 +1,18 @@
 /*
  * @Author: HDJ
  * @StartDate: please fill in
- * @LastEditTime: 2024-05-09 16:02:18
- * @FilePath: \java BasicHomework\ÉÏ»úÊµÑé\ÊµÑéÆß  IO²Ù×÷\testEx.java
+ * @LastEditTime: 2024-05-11 17:21:10
+ * @FilePath: \java BasicHomework\ä¸Šæœºå®éªŒ\å®éªŒä¸ƒ  IOæ“ä½œ\testExpt7.java
  * @Description: 
  * 
- * 				*		Ğ´×ÖÂ¥ÀïĞ´×Ö¼ä£¬Ğ´×Ö¼äÀï³ÌĞòÔ±£»
- * 				*		³ÌĞòÈËÔ±Ğ´³ÌĞò£¬ÓÖÄÃ³ÌĞò»»¾ÆÇ®¡£
- * 				*		¾ÆĞÑÖ»ÔÚÍøÉÏ×ø£¬¾Æ×í»¹À´ÍøÏÂÃß£»
- * 				*		¾Æ×í¾ÆĞÑÈÕ¸´ÈÕ£¬ÍøÉÏÍøÏÂÄê¸´Äê¡£
- * 				*		µ«Ô¸ÀÏËÀµçÄÔ¼ä£¬²»Ô¸¾Ï¹ªÀÏ°åÇ°£»
- * 				*		±¼³Û±¦Âí¹óÕßÈ¤£¬¹«½»×ÔĞĞ³ÌĞòÔ±¡£
- * 				*		±ğÈËĞ¦ÎÒß¯·èñ²£¬ÎÒĞ¦×Ô¼ºÃüÌ«¼ú£»
- * 				*		²»¼ûÂú½ÖÆ¯ÁÁÃÃ£¬ÄÄ¸ö¹éµÃ³ÌĞòÔ±£¿    
+ * 				*		å†™å­—æ¥¼é‡Œå†™å­—é—´ï¼Œå†™å­—é—´é‡Œç¨‹åºå‘˜ï¼›
+ * 				*		ç¨‹åºäººå‘˜å†™ç¨‹åºï¼Œåˆæ‹¿ç¨‹åºæ¢é…’é’±ã€‚
+ * 				*		é…’é†’åªåœ¨ç½‘ä¸Šåï¼Œé…’é†‰è¿˜æ¥ç½‘ä¸‹çœ ï¼›
+ * 				*		é…’é†‰é…’é†’æ—¥å¤æ—¥ï¼Œç½‘ä¸Šç½‘ä¸‹å¹´å¤å¹´ã€‚
+ * 				*		ä½†æ„¿è€æ­»ç”µè„‘é—´ï¼Œä¸æ„¿é èº¬è€æ¿å‰ï¼›
+ * 				*		å¥”é©°å®é©¬è´µè€…è¶£ï¼Œå…¬äº¤è‡ªè¡Œç¨‹åºå‘˜ã€‚
+ * 				*		åˆ«äººç¬‘æˆ‘å¿’ç–¯ç™«ï¼Œæˆ‘ç¬‘è‡ªå·±å‘½å¤ªè´±ï¼›
+ * 				*		ä¸è§æ»¡è¡—æ¼‚äº®å¦¹ï¼Œå“ªä¸ªå½’å¾—ç¨‹åºå‘˜ï¼Ÿ    
  * Copyright (c) 2024 by HDJ, All Rights Reserved. 
  */
 import java.io.BufferedWriter;
@@ -26,50 +26,52 @@ import java.util.Random;
 
 public class testExpt7 {
     public static void main(String[] args) {
-        // Èç¹ûÎÄ¼şd:\test.txt²»´æÔÚ£¬ÒÔ¸ÃÃû´´½¨Ò»¸öÎÄ¼ş£¬Èç¹û¸ÃÎÄ¼ş´æÔÚ£¬½«100¸öËæ»úÉú³ÉµÄÕûÊıĞ´ÈëÎÄ¼ş£¬ÕûÊıÖ®¼äÓÃ¿Õ¸ñ·Ö¸ô¡£
+        // å¦‚æœæ–‡ä»¶d:\test.txtä¸å­˜åœ¨ï¼Œä»¥è¯¥ååˆ›å»ºä¸€ä¸ªæ–‡ä»¶ï¼Œå¦‚æœè¯¥æ–‡ä»¶å­˜åœ¨ï¼Œå°†100ä¸ªéšæœºç”Ÿæˆçš„æ•´æ•°å†™å…¥æ–‡ä»¶ï¼Œæ•´æ•°ä¹‹é—´ç”¨ç©ºæ ¼åˆ†éš”ã€‚
         createAndWriteToFile("d:\\test.txt", 0, 1000);
 
-        // ½«text.txtÄÚÈİ¸´ÖÆµ½d:\text2.txtÖĞ¡£
+        // å°†text.txtå†…å®¹å¤åˆ¶åˆ°d:\text2.txtä¸­ã€‚
         copyFile("d:\\test.txt", "d:\\test2.txt");
 
-        // ½«e:\filedemoÏÂËùÓĞÎÄ¼şÃûĞ´Èëd:\text3.txtÎÄ¼şÖĞ£¬ÒªÇóÊ¹ÓÃ×Ö·û»º³åÊä³öÁ÷¡£
+        // å°†e:\filedemoä¸‹æ‰€æœ‰æ–‡ä»¶åå†™å…¥d:\text3.txtæ–‡ä»¶ä¸­ï¼Œè¦æ±‚ä½¿ç”¨å­—ç¬¦ç¼“å†²è¾“å‡ºæµã€‚
         listFilesInDirectory("e:\\filedemo", "d:\\test3.txt");
     }
 
+    /* 
+    * å¦‚æœæŒ‡å®šè·¯å¾„ä¸‹æ–‡ä»¶ä¸å­˜åœ¨ï¼Œä»¥è¯¥ååˆ›å»ºä¸€ä¸ªæ–‡ä»¶ï¼Œå¦‚æœè¯¥æ–‡ä»¶å­˜åœ¨ï¼Œå°†100ä¸ªéšæœºç”Ÿæˆçš„æ•´æ•°å†™å…¥æ–‡ä»¶ï¼Œæ•´æ•°ä¹‹é—´ç”¨ç©ºæ ¼åˆ†éš”ã€‚
+    * @param filePath æŒ‡å®šæ–‡ä»¶è·¯å¾„
+    * @param rangeStart éšæœºæ•°ç”Ÿæˆèµ·ç‚¹
+    * @param rangeEnd éšæœºæ•°ç”Ÿæˆç»ˆç‚¹
+    */
     private static void createAndWriteToFile(String filePath, int rangeStart, int rangeEnd) {
-        /* 
-         * Èç¹ûÖ¸¶¨Â·¾¶ÏÂÎÄ¼ş²»´æÔÚ£¬ÒÔ¸ÃÃû´´½¨Ò»¸öÎÄ¼ş£¬Èç¹û¸ÃÎÄ¼ş´æÔÚ£¬½«100¸öËæ»úÉú³ÉµÄÕûÊıĞ´ÈëÎÄ¼ş£¬ÕûÊıÖ®¼äÓÃ¿Õ¸ñ·Ö¸ô¡£
-         * @param filePath Ö¸¶¨ÎÄ¼şÂ·¾¶
-         * @param rangeStart Ëæ»úÊıÉú³ÉÆğµã
-         * @param rangeEnd Ëæ»úÊıÉú³ÉÖÕµã
-         */
+        
         try (FileOutputStream fos = new FileOutputStream(filePath);
-             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos))) {
+                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(fos))) {
 
             File file = new File(filePath);
             if (!file.exists()) {
                 file.createNewFile();
             }
-            // Éú³ÉËæ»úÊı
+            // ç”Ÿæˆéšæœºæ•°
             Random random = new Random();
             for (int i = 0; i < 100; i++) {
                 int num = rangeStart + random.nextInt(rangeEnd - rangeStart + 1);
                 writer.write(Integer.toString(num));
-                writer.write(" ");  // Á½¸öÊıÖ®¼äÓÃ¿Õ¸ñ¸ô¿ª
+                writer.write(" "); // ä¸¤ä¸ªæ•°ä¹‹é—´ç”¨ç©ºæ ¼éš”å¼€
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
+    
+    /*
+    * å¤åˆ¶æ–‡ä»¶å…¨éƒ¨å†…å®¹åˆ°å¦ä¸€ä¸ªæ–‡ä»¶
+    * @param sourcePath æºæ–‡ä»¶è·¯å¾„
+    * @param destinationPath ç›®æ ‡æ–‡ä»¶è·¯å¾„
+    */
     private static void copyFile(String sourcePath, String destinationPath) {
-        /*
-         * ¸´ÖÆÎÄ¼şÈ«²¿ÄÚÈİµ½ÁíÒ»¸öÎÄ¼ş
-         * @param sourcePath Ô´ÎÄ¼şÂ·¾¶
-         * @param destinationPath Ä¿±êÎÄ¼şÂ·¾¶
-         */
+
         try (FileInputStream fis = new FileInputStream(sourcePath);
-             FileOutputStream fos = new FileOutputStream(destinationPath)) {
+                FileOutputStream fos = new FileOutputStream(destinationPath)) {
 
             byte[] buffer = new byte[1024];
             int bytesRead;
@@ -80,17 +82,17 @@ public class testExpt7 {
             e.printStackTrace();
         }
     }
-
+    
+    /*
+    * å°†æŒ‡å®šç›®å½•ä¸‹æ‰€æœ‰æ–‡ä»¶åå†™å…¥æŒ‡å®šæ–‡ä»¶ä¸­ï¼Œä½¿ç”¨å­—ç¬¦ç¼“å†²è¾“å‡ºæµã€‚
+    * @param directoryPath ç›®å½•è·¯å¾„
+    * @param destinationPath ç›®æ ‡æ–‡ä»¶è·¯å¾„
+    */
     private static void listFilesInDirectory(String directoryPath, String destinationPath) {
-        /*
-         * ½«Ö¸¶¨Ä¿Â¼ÏÂËùÓĞÎÄ¼şÃûĞ´ÈëÖ¸¶¨ÎÄ¼şÖĞ£¬Ê¹ÓÃ×Ö·û»º³åÊä³öÁ÷¡£
-         * @param directoryPath Ä¿Â¼Â·¾¶
-         * @param destinationPath Ä¿±êÎÄ¼şÂ·¾¶
-         */
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(destinationPath))) {
             File directory = new File(directoryPath);
             if (directory.isDirectory()) {
-                File[] files = directory.listFiles(); // »ñÈ¡ÎÄ¼şÁĞ±í
+                File[] files = directory.listFiles(); // è·å–æ–‡ä»¶åˆ—è¡¨
                 if (files != null) {
                     for (File file : files) {
                         writer.write(file.getName());
