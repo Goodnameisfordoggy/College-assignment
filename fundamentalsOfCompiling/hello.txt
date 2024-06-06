@@ -1,0 +1,4 @@
+hello world
+123456
+\n
+fasfafaf
