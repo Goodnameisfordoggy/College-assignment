@@ -1,0 +1,9 @@
+double test(int a, double b)
+{
+  double c=(double) a;
+  double d=b+c;
+  if (d>0)
+  return d;
+  else
+  return 0;
+}
